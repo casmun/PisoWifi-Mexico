@@ -19,21 +19,21 @@ WiFiClient client;
 ESP8266telnetClient tc(client);
 
 #ifndef STASSID
-#define STASSID "YourWiFi"  // your Hotspot server
-#define STAPSK  ""          // hotspot password were always open
+#define STASSID "YourWiFi"  // El Wifi en tu Hotspot
+#define STAPSK  ""          // Contraseña del AP de tu Hotspot, si no la tiene dejalo en blanco
 #endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // change this according to your lcd
+LiquidCrystal_I2C lcd(0x27, 20, 4);  // Cambia esto dependiendo el tipo de Display LCD
 
 /* Soft AP network parameters */
 //IPAddress apIP(192, 168, 88, 1);
 //IPAddress netMsk(255, 255, 255, 0);
 
 //put here your raspi ip address, and login details
-IPAddress mikrotikRouterIp (10, 0, 0, 1);  // should be your mikrotik hotspot IP address
+IPAddress mikrotikRouterIp (10, 0, 0, 1);  // La IP de tu Hotspot por defecto puede ser 10.5.50.1
 
 // other variables
 char tmp[16];
